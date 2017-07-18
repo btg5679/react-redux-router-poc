@@ -4,19 +4,25 @@ import './App.css';
 import HelloWorld from '../HelloWorld/HelloWorld';
 import HelloWorldList from '../HelloWorldList/HelloWorldList';
 import About from '../About/About'
+import LeftPanel from '../LeftPanel/LeftPanel'
+import RightPanel from '../RightPanel/RightPanel'
 
 const App = () => (
-  <div>
-    <header>
-      <Link to="/">Hello World List</Link>
-      <Link to="/about-us">About</Link>
-    </header>
+	<div>
+		<header className="header">
+			<Link to="/">Hello World List</Link>
+			<Link to="/about-us">About</Link>
+		</header>
 
-    <main>
-      <Route exact path="/" component={HelloWorldList} />
-      <Route exact path="/about-us" component={About} />
-    </main>
-  </div>
+		<main className="appContainer">
+			<Route path="/" component={LeftPanel} />
+			<div className="mainContent">
+				<Route exact path="/" component={HelloWorldList} />
+				<Route exact path="/about-us" component={About} />
+			</div>
+			<Route path="/" component={RightPanel} />
+		</main>
+	</div>
 )
 
 export default App

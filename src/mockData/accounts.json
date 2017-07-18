@@ -1,0 +1,32 @@
+[
+  { 
+    "id": "156fd5d456",
+    "accountDisplayName": "20170405TES...",
+    "balance": "8,357.42",
+    "type": "CD"
+  },
+  {
+    "id": "fd546fds564",
+    "accountDisplayName": "IntSav1",
+    "balance": "22.83",
+    "type": "Savings"
+  },
+  {
+    "id": "798ew879ewr",
+    "accountDisplayName": "IntSav2",
+    "balance": "100.00",
+    "type": "Savings"
+  },
+  {
+    "id": "12fewr185ew",
+    "accountDisplayName": "LOB Checking",
+    "balance": "54,856.23",
+    "type": "Checking"
+  },
+  {
+    "id": "312dsf145ds",
+    "accountDisplayName": "mmmSAVINGS",
+    "balance": "22.84",
+    "type": "Savings"
+  }
+]
