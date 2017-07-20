@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
-import accountReducers from './AccountReducers'
+import accountsApp from './containers/AccountListContainer/reducer'
 
 export default combineReducers({
   routerReducer,
-  accountReducers
+  accountsApp
 })

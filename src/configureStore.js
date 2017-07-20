@@ -3,11 +3,11 @@ import { routerMiddleware } from 'react-router-redux'
 import { createLogger } from 'redux-logger'
 import thunk from 'redux-thunk'
 import createHistory from 'history/createBrowserHistory'
-import rootReducer from './Reducers/reducers'
+import rootReducer from './combineReducers'
 
 export const history = createHistory()
 
-const initialState = {}
+const initialState = {} //this is where we would hydrate our app with serevr state
 const loggerMiddleware = createLogger()
 const enhancers = []
 const middleware = [
@@ -29,10 +29,11 @@ const composedEnhancers = compose(
   ...enhancers
 )
 
-const store = createStore(
-  rootReducer,
-  initialState,
-  composedEnhancers
-)
-console.log('store: ', store.getState());
-export default store
+export default function configureStore(preloadedState) {
+  return createStore(
+    rootReducer,
+    initialState,
+    composedEnhancers
+  )
+}
+

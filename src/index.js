@@ -1,23 +1,12 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './components/App/App';
-// import registerServiceWorker from './registerServiceWorker';
-
-// ReactDOM.render(<App />, document.getElementById('root'));
-// registerServiceWorker();
-
-
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
-import store, { history } from './store'
+import configureStore, { history } from './configureStore'
 import App from './components/App/App'
-
-//import 'sanitize.css/sanitize.css'
 import './index.css'
 
+const store = configureStore()
 const target = document.querySelector('#root')
 
 render(
